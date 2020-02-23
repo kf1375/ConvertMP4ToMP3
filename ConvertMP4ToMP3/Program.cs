@@ -16,7 +16,7 @@ namespace ConvertMP4ToMP3
             ffmpegProcess.StartInfo.RedirectStandardOutput = true;
             ffmpegProcess.StartInfo.RedirectStandardError = true;
             ffmpegProcess.StartInfo.CreateNoWindow = true;
-            ffmpegProcess.StartInfo.FileName = "ffmpeg";
+            ffmpegProcess.StartInfo.FileName = "//path/to/ffmpeg";
             ffmpegProcess.StartInfo.Arguments = " -i " + inputFile + " -vn -f mp3 -ab 320k output " + outputFile;
             ffmpegProcess.Start();
             ffmpegProcess.StandardOutput.ReadToEnd();
@@ -26,7 +26,7 @@ namespace ConvertMP4ToMP3
             {
                 ffmpegProcess.Kill();
             }
-            Console.WriteLine(mp3out);  
+            Console.WriteLine(mp3out);
         }
     }
 }
